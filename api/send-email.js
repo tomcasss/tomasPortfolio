@@ -21,7 +21,15 @@ module.exports = async function handler(req, res) {
   }
 
   // Check for API key
-  if (!process.env.RESEND_API_KEY) {
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  
+  console.log('Environment check:', {
+    hasApiKey: !!apiKey,
+    apiKeyLength: apiKey?.length,
+    apiKeyPrefix: apiKey?.substring(0, 8)
+  });
+
+  if (!apiKey) {
     console.error('RESEND_API_KEY not found in environment variables');
     return res.status(500).json({ 
       success: false, 
@@ -30,6 +38,8 @@ module.exports = async function handler(req, res) {
   }
 
   const { name, email, subject, message } = req.body;
+
+  console.log('Request body:', { name, email, hasSubject: !!subject, hasMessage: !!message });
 
   // Validate required fields
   if (!name || !email || !message) {
@@ -41,7 +51,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(apiKey);
     
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
