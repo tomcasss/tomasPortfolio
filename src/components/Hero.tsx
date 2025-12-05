@@ -75,7 +75,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Photo Placeholder */}
+          {/* Profile Photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -83,11 +83,12 @@ const Hero = () => {
             className="flex-1 max-w-md"
           >
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 shadow-2xl overflow-hidden">
-                {/* Photo placeholder - replace with actual image */}
-                <div className="w-full h-full flex items-center justify-center text-white text-6xl font-bold bg-gradient-to-br from-blue-500 to-purple-600">
-                  TC
-                </div>
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 shadow-2xl overflow-hidden p-1">
+                <img 
+                  src="/hero.png" 
+                  alt="Tomas Castro" 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               {/* Decorative circles */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-70 blur-xl"></div>
