@@ -52,7 +52,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -60,10 +60,10 @@ const Experience = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
-            Work <span className="text-blue-600">Experience</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4">
+            Work <span className="text-blue-600 dark:text-blue-400">Experience</span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg">
             My professional journey
           </p>
 
@@ -87,12 +87,12 @@ const Experience = () => {
                   <div className="md:w-1/2">
                     <motion.div
                       whileHover={{ scale: 1.02, y: -5 }}
-                      className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+                      className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
                     >
                       {/* Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                             {exp.title}
                           </h3>
                           <div className="flex items-center gap-2 text-blue-600 font-semibold mb-2">
@@ -109,16 +109,16 @@ const Experience = () => {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-700 mb-4 leading-relaxed">
+                      <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                         {exp.description}
                       </p>
 
                       {/* Achievements */}
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Achievements:</h4>
                         <ul className="space-y-2">
                           {exp.achievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-start text-gray-700">
+                            <li key={idx} className="flex items-start text-gray-700 dark:text-gray-300">
                               <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                               <span className="text-sm">{achievement}</span>
                             </li>
@@ -131,7 +131,7 @@ const Experience = () => {
                         {exp.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-white text-gray-700 text-sm rounded-full font-medium shadow-sm"
+                            className="px-3 py-1 bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-200 text-sm rounded-full font-medium shadow-sm"
                           >
                             {tech}
                           </span>

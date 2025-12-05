@@ -6,10 +6,11 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ThemeToggle from './components/ThemeToggle'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       <Hero />
       <About />
@@ -18,6 +19,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ThemeToggle />
     </div>
   )
 }

@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -44,10 +44,10 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
-            Get In <span className="text-blue-600">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4">
+            Get In <span className="text-blue-600 dark:text-blue-400">Touch</span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg">
             Let's discuss your next project
           </p>
 
@@ -60,10 +60,10 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                   Let's work together!
                 </h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
                   I'm currently looking for new opportunities and would love to hear about your project. 
                   Whether you have a question or just want to say hi, feel free to reach out!
                 </p>
@@ -72,14 +72,14 @@ const Contact = () => {
               {/* Email Card */}
               <motion.div
                 whileHover={{ scale: 1.02, x: 5 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <Mail className="text-white" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-lg">Email Me</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-lg">Email Me</h4>
                     <a
                       href="mailto:tomasce2004@gmail.com"
                       className="text-blue-600 hover:text-blue-700 transition-colors"
@@ -91,8 +91,8 @@ const Contact = () => {
               </motion.div>
 
               {/* Additional Info */}
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-3">Available for:</h4>
+              <div className="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-6">
+                <h4 className="font-bold text-gray-900 dark:text-white mb-3">Available for:</h4>
                 <ul className="space-y-2">
                   {['Full-time positions', 'Freelance projects', 'Collaborations', 'Open source contributions'].map((item, index) => (
                     <motion.li
@@ -100,9 +100,9 @@ const Contact = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
-                      className="flex items-center text-gray-700"
+                      className="flex items-center text-gray-700 dark:text-gray-300"
                     >
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                      <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-3"></span>
                       {item}
                     </motion.li>
                   ))}
@@ -116,10 +116,10 @@ const Contact = () => {
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-lg space-y-6">
+              <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg space-y-6">
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Your Name
                   </label>
                   <div className="relative">
@@ -139,7 +139,7 @@ const Contact = () => {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Your Email
                   </label>
                   <div className="relative">
@@ -151,7 +151,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -159,7 +159,7 @@ const Contact = () => {
 
                 {/* Subject Field */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Subject
                   </label>
                   <input
@@ -169,14 +169,14 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="Project Inquiry"
                   />
                 </div>
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                     Message
                   </label>
                   <div className="relative">
@@ -188,7 +188,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>

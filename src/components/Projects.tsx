@@ -9,7 +9,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'RhythMe',
-      description: 'Full-stack social music platform focused on music discovery and interaction. Features Spotify API integration, real-time updates, authentication with JWT and Google OAuth, user management, feed with posts/comments/likes, notifications, and admin panel.',
+      description: 'Social music platform with Spotify integration, real-time updates, and user interaction features. Built with MERN stack.',
       technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Spotify API', 'Socket.io'],
       image: '/rythme.jpg',
       github: 'https://github.com/tomcasss/rhythme',
@@ -19,7 +19,7 @@ const Projects = () => {
     },
     {
       title: 'Tortuguero Hotel App',
-      description: 'Mobile application prototype for an eco-hotel built with .NET MAUI using MVVM architecture. Features multi-page navigation, sections for bookings, hotel info, history, and local attractions with structured XAML UI.',
+      description: 'Cross-platform mobile app for an eco-hotel using .NET MAUI and MVVM architecture with booking and information features.',
       technologies: ['.NET MAUI', 'XAML', 'MVVM', 'C#'],
       image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
       github: 'https://github.com/tomcasss/proyecto_final_movil',
@@ -40,7 +40,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -48,10 +48,10 @@ const Projects = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
-            My <span className="text-blue-600">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4">
+            My <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg">
             Recent work and personal projects
           </p>
 
@@ -63,7 +63,7 @@ const Projects = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden bg-gray-100">
@@ -78,10 +78,10 @@ const Projects = () => {
 
                 {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                     {project.description}
                   </p>
 
@@ -90,7 +90,7 @@ const Projects = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium"
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200 text-sm rounded-full font-medium"
                       >
                         {tech}
                       </span>

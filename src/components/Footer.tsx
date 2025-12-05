@@ -5,13 +5,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 dark:bg-black text-white py-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About Column */}
           <div>
             <h3 className="text-2xl font-bold mb-4">Tomas Castro</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 dark:text-gray-500 mb-4">
               Junior Full-Stack Developer passionate about creating elegant solutions to complex problems.
             </p>
           </div>
