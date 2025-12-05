@@ -27,21 +27,22 @@ const About = () => {
               className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12 shadow-lg"
             >
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                Hello! I'm <span className="font-semibold text-blue-600">Tomas Castro</span>, a passionate 
-                junior full-stack developer with a keen interest in creating innovative and user-friendly web applications. 
-                I recently completed my studies and am excited to bring my skills and enthusiasm to real-world projects.
+                Hello! I'm <span className="font-semibold text-blue-600">Tomas Castro</span>, I’m a Full-Stack Developer currently 
+                completing my Computer Engineering degree at ULACIT. Throughout my career, I’ve gained experience working with 
+                technologies such as <span className="font-semibold">React, TypeScript, JavaScript, C#, .NET, Java, and Python</span>, 
+                developing academic, personal, and internship projects.
               </p>
               
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                My journey in software development has equipped me with a solid foundation in both front-end and 
-                back-end technologies. I enjoy the challenge of solving complex problems and continuously learning 
-                new technologies to stay current in this ever-evolving field.
+                I have hands-on experience working with <span className="font-semibold">SQL and NoSQL databases, building APIs, 
+                implementing clean architectures, and deploying applications on modern cloud platforms</span>. 
+                I’m also preparing for my <span className="font-semibold">AWS Cloud Practitioner</span> certification, 
+                as my long-term goal is to specialize in cloud architecture and scalable distributed systems.
               </p>
 
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                I'm proficient in <span className="font-semibold">JavaScript, TypeScript, React, Node.js</span>, and 
-                various database systems. I also have experience with cloud platforms like <span className="font-semibold">AWS</span>. 
-                I'm eager to collaborate on projects that push boundaries and create meaningful user experiences.
+                I enjoy working on projects that challenge me to think, design, and build with quality in mind. I’m always looking for 
+                opportunities to grow my skills and contribute to meaningful, well-engineered solutions.
               </p>
 
               <motion.div

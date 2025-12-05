@@ -8,43 +8,46 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Full-Stack Developer',
-      company: 'Tech Company Name',
-      period: 'Jan 2024 - Present',
-      location: 'Remote',
-      description: 'Developed and maintained full-stack web applications using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams to deliver high-quality features.',
+      title: 'Computer Engineering Student',
+      company: 'ULACIT — Academic Projects',
+      period: 'January 2023 - April 2026',
+      location: 'Costa Rica',
+      description: 'As part of my Computer Engineering degree, I have developed multiple end-to-end projects using modern development stacks, cloud fundamentals, and software architecture best practices.',
       achievements: [
-        'Implemented new features that increased user engagement by 30%',
-        'Optimized database queries reducing load times by 40%',
-        'Mentored junior developers in best practices'
+        'Built full-stack applications using Python/Django, C#/.NET, Java, and JavaScript',
+        'Implemented REST APIs and structured systems using MVC and MVVM architectures',
+        'Developed cross-platform apps with .NET MAUI, applying MVVM for state management',
+        'Designed and managed relational and NoSQL databases: Oracle, MySQL, SQL Server, MongoDB, and Firebase'
       ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS']
+      technologies: ['Python', 'Django', 'C#', '.NET', 'Java', 'MAUI', 'Oracle', 'MongoDB', 'Firebase']
     },
     {
-      title: 'Junior Developer',
-      company: 'Previous Company',
-      period: 'Jun 2023 - Dec 2023',
-      location: 'City, Country',
-      description: 'Assisted in building responsive web applications and RESTful APIs. Participated in code reviews and agile development processes.',
+      title: 'Software Engineering Intern',
+      company: 'Capris S.A.',
+      period: 'September 2025 - December 2025',
+      location: 'Costa Rica',
+      description: 'Contributed to backend development, database integrations, and production-level improvements using enterprise tools and workflows. Collaborated with senior engineers and worked with real systems used by clients.',
       achievements: [
-        'Built responsive UI components with React',
-        'Developed RESTful APIs with Express.js',
-        'Improved test coverage by 25%'
+        'Developed backend features using C# and .NET for internal business services',
+        'Created and optimized PL/SQL procedures and integrated them with .NET services',
+        'Built Oracle HTP web reports, generating dynamic HTML responses directly from PL/SQL',
+        'Debugged and refactored existing components to improve system reliability and performance',
+        'Followed professional GitLab workflows using branches, merge requests, and code reviews'
       ],
-      technologies: ['JavaScript', 'React', 'Express', 'MongoDB']
+      technologies: ['C#', '.NET', 'PL/SQL', 'Oracle', 'GitLab']
     },
     {
-      title: 'Intern Developer',
-      company: 'Startup Name',
-      period: 'Jan 2023 - May 2023',
-      location: 'City, Country',
-      description: 'Contributed to front-end development and learned industry best practices. Worked on bug fixes and small feature implementations.',
+      title: 'Next Chapter Loading...',
+      company: 'To Be Continued 🚀',
+      period: 'Coming Soon',
+      location: 'Somewhere Exciting',
+      description: 'The story continues... Stay tuned for the next adventure in my professional journey!',
       achievements: [
-        'Fixed over 50 bugs in the existing codebase',
-        'Implemented responsive designs from Figma mockups',
-        'Participated in daily standups and sprint planning'
+        'New challenges await',
+        'More technologies to master',
+        'Exciting projects on the horizon'
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Git']
+      technologies: ['???', '🎯', '💡', '⚡']
     }
   ];
 
@@ -163,7 +166,7 @@ const Experience = () => {
           >
             <a
               href="/resume.pdf"
-              download
+              download="Tomas_Castro_Resume.pdf"
               className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <svg

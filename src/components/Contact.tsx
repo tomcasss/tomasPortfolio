@@ -13,8 +13,6 @@ const Contact = () => {
     message: ''
   });
 
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -24,17 +22,17 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus('sent');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      setTimeout(() => {
-        setStatus('idle');
-      }, 3000);
-    }, 1500);
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:tomasce2004@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   return (
@@ -83,10 +81,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 text-lg">Email Me</h4>
                     <a
-                      href="mailto:tomas.castro@example.com"
+                      href="mailto:tomasce2004@gmail.com"
                       className="text-blue-600 hover:text-blue-700 transition-colors"
                     >
-                      tomas.castro@example.com
+                      tomasce2004@gmail.com
                     </a>
                   </div>
                 </div>
@@ -199,25 +197,12 @@ const Contact = () => {
                 {/* Submit Button */}
                 <motion.button
                   type="submit"
-                  disabled={status === 'sending'}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-white flex items-center justify-center gap-2 transition-all duration-300 ${
-                    status === 'sending'
-                      ? 'bg-gray-400 cursor-not-allowed'
-                      : status === 'sent'
-                      ? 'bg-green-600 hover:bg-green-700'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-                  }`}
+                  className="w-full py-3 px-6 rounded-lg font-semibold text-white flex items-center justify-center gap-2 transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl"
                 >
-                  {status === 'sending' && 'Sending...'}
-                  {status === 'sent' && '✓ Message Sent!'}
-                  {status === 'idle' && (
-                    <>
-                      <Send size={20} />
-                      Send Message
-                    </>
-                  )}
+                  <Send size={20} />
+                  Send Message
                 </motion.button>
               </form>
             </motion.div>

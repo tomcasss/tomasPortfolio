@@ -9,17 +9,27 @@ const Skills = () => {
     {
       category: 'Frontend',
       items: [
-        { name: 'JavaScript', icon: '🟨', color: 'from-yellow-400 to-yellow-600' },
-        { name: 'TypeScript', icon: '🔷', color: 'from-blue-500 to-blue-700' },
         { name: 'React', icon: '⚛️', color: 'from-cyan-400 to-blue-500' },
+        { name: 'TypeScript', icon: '🔷', color: 'from-blue-500 to-blue-700' },
+        { name: 'JavaScript', icon: '🟨', color: 'from-yellow-400 to-yellow-600' },
+        { name: 'HTML5', icon: '🌐', color: 'from-orange-500 to-red-500' },
+        { name: 'CSS3', icon: '🎨', color: 'from-blue-400 to-blue-600' },
+        { name: 'Tailwind CSS', icon: '💨', color: 'from-cyan-400 to-cyan-600' },
+        { name: 'Vite', icon: '⚡', color: 'from-purple-500 to-purple-700' },
+        { name: 'MAUI', icon: '📱', color: 'from-indigo-500 to-purple-600' },
       ]
     },
     {
       category: 'Backend',
       items: [
-        { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-700' },
-        { name: 'C#', icon: '🟣', color: 'from-purple-500 to-purple-700' },
+        { name: 'C# / .NET', icon: '🟣', color: 'from-purple-500 to-purple-700' },
         { name: 'Java', icon: '☕', color: 'from-red-500 to-orange-600' },
+        { name: 'Python', icon: '🐍', color: 'from-blue-500 to-yellow-500' },
+        { name: 'Django', icon: '🎸', color: 'from-green-700 to-green-900' },
+        { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-700' },
+        { name: 'REST API', icon: '🔌', color: 'from-teal-500 to-teal-700' },
+        { name: 'MVC & MVVM', icon: '🏗️', color: 'from-gray-600 to-gray-800' },
+        { name: 'PL/SQL', icon: '📊', color: 'from-red-700 to-red-900' },
       ]
     },
     {
@@ -27,14 +37,20 @@ const Skills = () => {
       items: [
         { name: 'SQL Server', icon: '🗄️', color: 'from-red-600 to-red-800' },
         { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-600 to-indigo-700' },
+        { name: 'Oracle DB', icon: '🔴', color: 'from-red-700 to-red-900' },
         { name: 'MongoDB', icon: '🍃', color: 'from-green-600 to-green-800' },
-        { name: 'Oracle', icon: '🔴', color: 'from-red-700 to-red-900' },
+        { name: 'Firebase', icon: '🔥', color: 'from-yellow-500 to-orange-600' },
       ]
     },
     {
       category: 'Cloud & Tools',
       items: [
         { name: 'AWS', icon: '☁️', color: 'from-orange-400 to-orange-600' },
+        { name: 'Vercel', icon: '▲', color: 'from-gray-300 to-gray-500' },
+        { name: 'Git & GitHub', icon: '📦', color: 'from-gray-400 to-gray-600' },
+        { name: 'GitLab', icon: '🦊', color: 'from-orange-600 to-red-600' },
+        { name: 'Postman', icon: '📮', color: 'from-orange-500 to-orange-700' },
+        { name: 'Docker', icon: '🐳', color: 'from-blue-500 to-blue-700' },
       ]
     }
   ];
@@ -98,7 +114,7 @@ const Skills = () => {
                 <span className="font-bold text-blue-600">Full-Stack Proficiency</span> with modern technologies
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                {['Git', 'Docker', 'REST APIs', 'Agile', 'CI/CD'].map((tool, index) => (
+                {['Relational DB', 'NoSQL', 'Agile', 'CI/CD', 'Responsive Design'].map((tool, index) => (
                   <motion.span
                     key={tool}
                     initial={{ opacity: 0, scale: 0.8 }}
