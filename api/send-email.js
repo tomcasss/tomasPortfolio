@@ -1,7 +1,5 @@
 const { Resend } = require("resend");
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 module.exports = async function handler(req, res) {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -19,21 +17,36 @@ module.exports = async function handler(req, res) {
   }
 
   if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" });
+    return res.status(405).json({ success: false, message: "Method not allowed" });
+  }
+
+  // Check for API key
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY not found in environment variables');
+    return res.status(500).json({ 
+      success: false, 
+      message: "Server configuration error: Missing API key" 
+    });
   }
 
   const { name, email, subject, message } = req.body;
 
   // Validate required fields
   if (!name || !email || !message) {
-    return res.status(400).json({ message: "Missing required fields" });
+    return res.status(400).json({ 
+      success: false, 
+      message: "Missing required fields",
+      required: ["name", "email", "message"]
+    });
   }
 
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
     const data = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Acme <onboarding@resend.dev>",
       to: "tomasce2004@gmail.com",
-      replyTo: email,
+      reply_to: email,
       subject: subject || "New message from your portfolio",
       html: `
         <h2>New message from your portfolio</h2>
@@ -45,13 +58,16 @@ module.exports = async function handler(req, res) {
       `,
     });
 
+    console.log('Email sent successfully:', data);
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', JSON.stringify(error, null, 2));
     return res.status(500).json({ 
       success: false, 
       message: "Failed to send email",
-      error: error.message 
+      error: error.message,
+      details: error.response?.data || error.toString()
     });
   }
 }
