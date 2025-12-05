@@ -95,14 +95,14 @@ const Experience = () => {
                           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                             {exp.title}
                           </h3>
-                          <div className="flex items-center gap-2 text-blue-600 font-semibold mb-2">
+                          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold mb-2">
                             <Briefcase size={18} />
                             <span>{exp.company}</span>
                           </div>
-                          <div className="flex items-center gap-2 text-gray-600 text-sm">
+                          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm">
                             <Calendar size={16} />
                             <span>{exp.period}</span>
-                            <span className="text-gray-400">•</span>
+                            <span className="text-gray-400 dark:text-gray-500">•</span>
                             <span>{exp.location}</span>
                           </div>
                         </div>

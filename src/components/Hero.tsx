@@ -101,13 +101,13 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <motion.a
             href="#about"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="flex flex-col items-center text-gray-400 hover:text-gray-600 transition-colors"
+            className="flex flex-col items-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
           >
             <span className="text-sm mb-2">Scroll Down</span>
             <ChevronDown size={24} />
