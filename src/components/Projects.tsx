@@ -23,6 +23,7 @@ const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Vercel'],
       image: '/portfolio.png',
       github: 'https://github.com/tomcasss/tomasPortfolio',
+      demo: null,
       gradient: 'from-blue-600 to-purple-600',
       status: 'completed'
     },
