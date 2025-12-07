@@ -18,6 +18,15 @@ const Projects = () => {
       status: 'completed'
     },
     {
+      title: 'Personal Portfolio',
+      description: 'Modern responsive portfolio website with dark mode, animated UI, and serverless contact form using Resend API.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Vercel'],
+      image: '/portfolio.png',
+      github: 'https://github.com/tomcasss/tomasPortfolio',
+      gradient: 'from-blue-600 to-purple-600',
+      status: 'completed'
+    },
+    {
       title: 'Tortuguero Hotel App',
       description: 'Cross-platform mobile app for an eco-hotel using .NET MAUI and MVVM architecture with booking and information features.',
       technologies: ['.NET MAUI', 'XAML', 'MVVM', 'C#'],
