@@ -6,9 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <title>tomasportfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Tomas Castro - Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Junior Full-Stack Developer specializing in React, TypeScript, C#, .NET, Python, and cloud technologies. Computer Engineering student at ULACIT with experience in building modern web applications." />
+    <meta name="keywords" content="Full-Stack Developer, React, TypeScript, C#, .NET, Python, Web Developer, Software Engineer, Tomas Castro" />
+    <meta name="author" content="Tomas Castro" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tomas Castro - Full-Stack Developer" />
+    <meta property="og:description" content="Junior Full-Stack Developer passionate about building modern web applications with clean code and exceptional user experiences." />
+    <meta property="og:url" content="https://tomas-castro.vercel.app" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tomas Castro - Full-Stack Developer" />
+    <meta name="twitter:description" content="Full-Stack Developer specializing in React, TypeScript, C#, and .NET" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tomas Castro",
+      "url": "https://tomas-castro.vercel.app",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Junior Full-Stack Developer specializing in React, TypeScript, C#, .NET, and Python",
+      "email": "tomasce2004@gmail.com",
+      "sameAs": [
+        "https://github.com/tomcasss",
+        "https://www.linkedin.com/in/tomas-castro04"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "ULACIT"
+      },
+      "knowsAbout": ["React", "TypeScript", "JavaScript", "C#", ".NET", "Python", "Node.js", "MongoDB", "SQL", "AWS", "Tailwind CSS"]
+    }
+    </script>
   </head>
   <body>
+    <!-- Noscript fallback for bots and users without JavaScript -->
+    <noscript>
+      <style>
+        #root { display: none; }
+        .fallback-content { 
+          max-width: 800px; 
+          margin: 50px auto; 
+          padding: 20px; 
+          font-family: system-ui, -apple-system, sans-serif;
+          line-height: 1.6;
+        }
+        .fallback-content h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .fallback-content h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #3b82f6; }
+        .fallback-content ul { margin-left: 20px; }
+      </style>
+      <div class="fallback-content">
+        <h1>Tomas Castro - Full-Stack Developer</h1>
+        <p><strong>Email:</strong> tomasce2004@gmail.com</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/tomcasss">github.com/tomcasss</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tomas-castro04">linkedin.com/in/tomas-castro04</a></p>
+        
+        <h2>About Me</h2>
+        <p>Junior Full-Stack Developer currently completing my Computer Engineering degree at ULACIT. Passionate about building modern web applications with clean code and exceptional user experiences.</p>
+        
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Frontend:</strong> React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Vite</li>
+          <li><strong>Backend:</strong> C#, .NET, Java, Python, Django, Node.js, REST API</li>
+          <li><strong>Databases:</strong> SQL Server, PostgreSQL, Oracle DB, MongoDB, Firebase</li>
+          <li><strong>Cloud & Tools:</strong> AWS, Vercel, Git, GitHub, GitLab, Postman, Docker</li>
+        </ul>
+        
+        <h2>Experience</h2>
+        <h3>Software Engineering Intern - Capris S.A. (Sep 2025 - Dec 2025)</h3>
+        <ul>
+          <li>Developed backend features using C# and .NET</li>
+          <li>Created and optimized PL/SQL procedures</li>
+          <li>Built Oracle HTP web reports</li>
+        </ul>
+        
+        <h3>Computer Engineering Student - ULACIT (Jan 2023 - Apr 2026)</h3>
+        <ul>
+          <li>Built full-stack applications using Python/Django, C#/.NET, Java, and JavaScript</li>
+          <li>Implemented REST APIs and MVC/MVVM architectures</li>
+          <li>Developed cross-platform apps with .NET MAUI</li>
+        </ul>
+        
+        <h2>Featured Projects</h2>
+        <ul>
+          <li><strong>RhythMe:</strong> Social music platform with Spotify integration (MERN stack)</li>
+          <li><strong>Personal Portfolio:</strong> Modern responsive website with dark mode and serverless contact form</li>
+          <li><strong>Tortuguero Hotel App:</strong> Cross-platform mobile app using .NET MAUI</li>
+        </ul>
+        
+        <p><em>This site requires JavaScript. Please enable JavaScript to view the full interactive portfolio.</em></p>
+      </div>
+    </noscript>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
