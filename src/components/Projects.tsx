@@ -31,8 +31,8 @@ const Projects = () => {
       title: 'Tortuguero Hotel App',
       description: 'Cross-platform mobile app for an eco-hotel using .NET MAUI and MVVM architecture with booking and information features.',
       technologies: ['.NET MAUI', 'XAML', 'MVVM', 'C#'],
-      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
-      github: 'https://github.com/tomcasss/proyecto_final_movil',
+      image: '/tortuguero.jpg',
+      github: 'https://github.com/tomcasss/tortugueroApp',
       demo: null,
       gradient: 'from-blue-500 to-cyan-500',
       status: 'under-construction'
