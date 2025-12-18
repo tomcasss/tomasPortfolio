@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Tomas Castro</h3>
             <p className="text-gray-400 dark:text-gray-500 mb-4">
-              Junior Full-Stack Developer passionate about creating elegant solutions to complex problems.
+               Full-Stack Developer passionate about creating elegant solutions to complex problems.
             </p>
           </div>
 
@@ -20,14 +21,21 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About', path: '/about' },
+                { name: 'Skills', path: '/skills' },
+                { name: 'Experience', path: '/experience' },
+                { name: 'Projects', path: '/projects' },
+                { name: 'Contact', path: '/contact' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

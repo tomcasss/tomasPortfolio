@@ -35,7 +35,7 @@ const Projects = () => {
       github: 'https://github.com/tomcasss/tortugueroApp',
       demo: null,
       gradient: 'from-blue-500 to-cyan-500',
-      status: 'under-construction'
+      status: 'completed'
     },
     {
       title: 'Coming Soon...',
