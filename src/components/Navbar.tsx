@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
@@ -40,8 +40,8 @@ const Navbar = () => {
               >
                 <Link
                   to={link.href}
-                  className={`text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium ${
-                    location.pathname === link.href ? 'text-blue-600 dark:text-blue-400' : ''
+                  className={`text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-medium pb-1 border-b-2 ${
+                    location.pathname === link.href ? 'text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400' : 'border-transparent'
                   }`}
                 >
                   {link.name}
@@ -77,8 +77,8 @@ const Navbar = () => {
                   key={link.name}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium ${
-                    location.pathname === link.href ? 'text-blue-600 dark:text-blue-400' : ''
+                  className={`block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 transition-all font-medium ${
+                    location.pathname === link.href ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800 border-l-4 border-blue-600' : ''
                   }`}
                 >
                   {link.name}

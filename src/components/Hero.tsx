@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { Briefcase, Code, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -48,7 +49,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-4 justify-center md:justify-start"
+              className="flex flex-wrap gap-4 justify-center md:justify-start mb-8"
             >
               <a
                 href="https://github.com/tomcasss"
@@ -73,6 +74,7 @@ const Hero = () => {
                 <span>LinkedIn</span>
               </a>
             </motion.div>
+
           </motion.div>
 
           {/* Profile Photo */}
@@ -90,29 +92,58 @@ const Hero = () => {
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              {/* Decorative circles */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-70 blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-pink-400 rounded-full opacity-70 blur-xl"></div>
+              {/* Decorative circles - Responsive sizes */}
+              <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-12 h-12 md:w-20 md:h-20 bg-yellow-400 rounded-full opacity-60 md:opacity-70 blur-lg md:blur-xl"></div>
+              <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 bg-pink-400 rounded-full opacity-60 md:opacity-70 blur-lg md:blur-xl"></div>
             </div>
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Quick Navigation Cards */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="hidden md:flex absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto mt-12"
         >
-          <motion.a
-            href="#about"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="flex flex-col items-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+          <Link
+            to="/projects"
+            className="flex items-center gap-3 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700"
           >
-            <span className="text-sm mb-2">Scroll Down</span>
-            <ChevronDown size={24} />
-          </motion.a>
+            <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+              <Code className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div className="text-left">
+              <h3 className="font-semibold text-gray-900 dark:text-white text-sm">Projects</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">View my work</p>
+            </div>
+          </Link>
+
+          <Link
+            to="/experience"
+            className="flex items-center gap-3 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700"
+          >
+            <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+              <Briefcase className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            </div>
+            <div className="text-left">
+              <h3 className="font-semibold text-gray-900 dark:text-white text-sm">Experience</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">My background</p>
+            </div>
+          </Link>
+
+          <Link
+            to="/contact"
+            className="flex items-center gap-3 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700"
+          >
+            <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+              <Mail className="w-5 h-5 text-green-600 dark:text-green-400" />
+            </div>
+            <div className="text-left">
+              <h3 className="font-semibold text-gray-900 dark:text-white text-sm">Contact</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Get in touch</p>
+            </div>
+          </Link>
         </motion.div>
       </div>
     </section>
