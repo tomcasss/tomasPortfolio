@@ -84,13 +84,13 @@ const Skills = () => {
                   {category.category}
                 </h3>
                 <div className="space-y-4">
-                  {category.items.map((skill, skillIndex) => (
+                  {category.items.map((skill) => (
                     <motion.div
                       key={skill.name}
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      whileHover={{ scale: 1.05, x: 5 }}
                       transition={{ duration: 0.15 }}
+                      whileHover={{ scale: 1.05, x: 5 }}
                       className={`flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r ${skill.color} dark:opacity-90 cursor-pointer`}
                       style={{
                         backgroundColor: 'rgba(255, 255, 255, 0.1)',
