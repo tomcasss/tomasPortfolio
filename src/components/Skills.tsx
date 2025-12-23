@@ -89,7 +89,6 @@ const Skills = () => {
                       key={skill.name}
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.1, duration: 0.5 }}
                       whileHover={{ scale: 1.05, x: 5 }}
                       transition={{ duration: 0.15 }}
                       className={`flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r ${skill.color} dark:opacity-90 cursor-pointer`}
