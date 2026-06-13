@@ -25,6 +25,7 @@ const Skills = () => {
         { name: 'C# / .NET', icon: '🟣', color: 'from-purple-500 to-purple-700' },
         { name: 'Java', icon: '☕', color: 'from-red-500 to-orange-600' },
         { name: 'Python', icon: '🐍', color: 'from-blue-500 to-yellow-500' },
+        { name: 'FastAPI', icon: '🚀', color: 'from-teal-400 to-green-600' },
         { name: 'Django', icon: '🎸', color: 'from-green-700 to-green-900' },
         { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-700' },
         { name: 'REST API', icon: '🔌', color: 'from-teal-500 to-teal-700' },

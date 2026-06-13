@@ -23,8 +23,8 @@ const Experience = () => {
     },
     {
       title: 'Software Engineering Intern',
-      company: 'Capris S.A.',
-      period: 'September 2025 - December 2025',
+      company: 'Capris Engineering S.A.',
+      period: 'September 2025 - February 2026',
       location: 'Costa Rica',
       description: 'Contributed to backend development, database integrations, and production-level improvements using enterprise tools and workflows. Collaborated with senior engineers and worked with real systems used by clients.',
       achievements: [
@@ -35,19 +35,6 @@ const Experience = () => {
         'Followed professional GitLab workflows using branches, merge requests, and code reviews'
       ],
       technologies: ['C#', '.NET', 'PL/SQL', 'Oracle', 'GitLab']
-    },
-    {
-      title: 'Next Chapter Loading...',
-      company: 'To Be Continued 🚀',
-      period: 'Coming Soon',
-      location: 'Somewhere Exciting',
-      description: 'The story continues... Stay tuned for the next adventure in my professional journey!',
-      achievements: [
-        'New challenges await',
-        'More technologies to master',
-        'Exciting projects on the horizon'
-      ],
-      technologies: ['???', '🎯', '💡', '⚡']
     }
   ];
 

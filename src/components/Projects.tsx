@@ -8,6 +8,17 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Inventario App',
+      description: 'Multi-tenant inventory management system with lot/serial traceability, min/max stock control with automatic purchase orders, and a documental movement flow (reception, consumption, transfer) with verification states.',
+      technologies: ['FastAPI', 'Python', 'PostgreSQL', 'Supabase', 'React', 'TypeScript', 'JWT', 'Docker'],
+      image: '/inventario.png',
+      github: 'https://github.com/tomcasss/Inventario_app',
+      demo: 'https://inventario-app-rho.vercel.app',
+      gradient: 'from-orange-500 to-red-600',
+      status: 'completed',
+      featured: true
+    },
+    {
       title: 'RhythMe',
       description: 'Social music platform with Spotify integration, real-time updates, and user interaction features. Built with MERN stack.',
       technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Spotify API', 'Socket.io'],
@@ -23,7 +34,7 @@ const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Vercel'],
       image: '/portfolio.png',
       github: 'https://github.com/tomcasss/tomasPortfolio',
-      demo: null,
+      demo: 'https://tomasportfolio-one.vercel.app',
       gradient: 'from-blue-600 to-purple-600',
       status: 'completed'
     },
@@ -36,16 +47,6 @@ const Projects = () => {
       demo: null,
       gradient: 'from-blue-500 to-cyan-500',
       status: 'completed'
-    },
-    {
-      title: 'Coming Soon...',
-      description: 'The next big project is in the works! Stay tuned for something exciting.',
-      technologies: ['???', '🚀', '💡'],
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
-      github: null,
-      demo: null,
-      gradient: 'from-purple-500 to-pink-500',
-      status: 'coming-soon'
     },
   ];
 
@@ -73,7 +74,7 @@ const Projects = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
                 whileHover={{ y: -10 }}
-                className="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="relative bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden bg-gray-100">
@@ -85,6 +86,13 @@ const Projects = () => {
                     transition={{ duration: 0.3 }}
                   />
                 </div>
+
+                {/* Featured badge */}
+                {project.featured && (
+                  <div className="absolute top-3 right-3 inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs font-semibold rounded-full shadow-lg">
+                    ⭐ Featured
+                  </div>
+                )}
 
                 {/* Project Content */}
                 <div className="p-6">

@@ -32,8 +32,9 @@ const About = () => {
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                 Hello! I'm <span className="font-semibold text-blue-600">Tomas Castro</span>, I’m a Full-Stack Developer currently 
                 completing my Computer Engineering degree at ULACIT. Throughout my career, I’ve gained experience working with 
-                technologies such as <span className="font-semibold">React, TypeScript, JavaScript, C#, .NET, Java, and Python</span>, 
-                developing academic, personal, and internship projects.
+                technologies such as <span className="font-semibold">React, TypeScript, JavaScript, C#, .NET, Java, Python, and FastAPI</span>,
+                developing academic, personal, and internship projects — including a multi-tenant inventory platform with
+                PostgreSQL and automated stock workflows.
               </p>
               
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
