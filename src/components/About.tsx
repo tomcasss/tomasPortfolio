@@ -30,17 +30,23 @@ const About = () => {
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-xl transition-all duration-300"
             >
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Hello! I'm <span className="font-semibold text-blue-600">Tomas Castro</span>, I’m a Full-Stack Developer currently 
-                completing my Computer Engineering degree at ULACIT. Throughout my career, I’ve gained experience working with 
-                technologies such as <span className="font-semibold">React, TypeScript, JavaScript, C#, .NET, Java, Python, and FastAPI</span>,
-                developing academic, personal, and internship projects — including a multi-tenant inventory platform with
-                PostgreSQL and automated stock workflows.
+                Hello! I'm <span className="font-semibold text-blue-600">Tomas Castro</span>, a Full-Stack Developer and
+                recent <span className="font-semibold">Computer Engineering graduate</span> from ULACIT. Throughout my studies,
+                internship, and personal projects I've gained experience working with technologies such as{' '}
+                <span className="font-semibold">React, TypeScript, JavaScript, C#, .NET, Java, Python, and FastAPI</span>.
               </p>
-              
+
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                I have hands-on experience working with <span className="font-semibold">SQL and NoSQL databases, building APIs, 
-                implementing clean architectures, and deploying applications on modern cloud platforms</span>. 
-                I’m also preparing for my <span className="font-semibold">AWS Cloud Practitioner</span> certification, 
+                During my internship at <span className="font-semibold">Capris Engineering</span> I worked on enterprise software
+                with C# / .NET and Oracle, where I built a <span className="font-semibold">multi-tenant system entirely in PL/SQL</span>.
+                On my own, I designed and developed a <span className="font-semibold">multi-tenant inventory platform with FastAPI
+                and PostgreSQL</span>, featuring lot/serial traceability and automated purchase orders.
+              </p>
+
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                I have hands-on experience working with <span className="font-semibold">SQL and NoSQL databases, building APIs,
+                implementing clean architectures, and deploying applications on modern cloud platforms</span>.
+                I'm also preparing for my <span className="font-semibold">AWS Cloud Practitioner</span> certification,
                 as my long-term goal is to specialize in cloud architecture and scalable distributed systems.
               </p>
 
