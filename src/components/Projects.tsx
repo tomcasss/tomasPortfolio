@@ -16,7 +16,8 @@ const Projects = () => {
       demo: 'https://inventario-app-rho.vercel.app',
       gradient: 'from-orange-500 to-red-600',
       status: 'completed',
-      featured: true
+      featured: true,
+      note: 'Heads-up: the backend runs on Render\'s free tier, so the first login request may take ~50s while the server wakes up. After that it responds normally.'
     },
     {
       title: 'RhythMe',
@@ -124,6 +125,14 @@ const Projects = () => {
                   {project.status === 'coming-soon' && (
                     <div className="mb-3 inline-block px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">
                       🔮 Coming Soon
+                    </div>
+                  )}
+
+                  {/* Demo heads-up note */}
+                  {project.note && (
+                    <div className="mb-4 flex items-start gap-2 rounded-lg border border-amber-300 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10 px-3 py-2 text-xs text-amber-800 dark:text-amber-300">
+                      <span className="mt-0.5">⏱️</span>
+                      <span>{project.note}</span>
                     </div>
                   )}
 
